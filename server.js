@@ -2,6 +2,12 @@ var express = require('express');
 
 var app = express();
 
+app.get('/', function(req, res) {
+  res.status(200).send({
+    "message": "try adding a timestamp to the end of the url"
+  });
+});
+
 app.get('/:time', function(req, res) {
   var time = req.params.time;
   var date;
